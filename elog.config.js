@@ -32,7 +32,7 @@ module.exports = {
       bucket: process.env.QINIU_BUCKET,
       region: process.env.QINIU_REGION,
       host: process.env.QINIU_HOST,
-      prefixKey: 'blog/',
+      prefixKey: 'blog',
     }
   }
 }
