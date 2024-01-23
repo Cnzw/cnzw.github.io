@@ -105,4 +105,4 @@ deploy:
   type: git
   repo: https://github.com/Cnzw/cnzw.github.io.git
   branch: main
-  message: "Update Posts"
+  message: "更新文章"
