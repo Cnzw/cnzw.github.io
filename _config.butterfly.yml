@@ -459,6 +459,26 @@ waline:
   bg: # waline background
   pageview: true
   option:
+    requiredMeta: ["nick", "mail"]
+    emoji:
+      [
+        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq'
+      ]
+    reaction:
+      [
+        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_thumbsup.gif', # 赞
+        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_thumbsdown.gif', # 踩
+        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_lift_check.gif', # 思考
+        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_dizzy_face.gif', # 晕
+        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_waterlemon_face.gif' # 无聊
+      ]
+    locale:
+      reaction0: 赞
+      reaction1: 踩
+      reaction2: 思考
+      reaction3: 晕
+      reaction4: 无聊
+      placeholder: "欢迎评论\n评论需要填写昵称邮箱或使用社交登录\n评论会展示您的UA和归属地"
 
 # utterances
 # https://utteranc.es/
