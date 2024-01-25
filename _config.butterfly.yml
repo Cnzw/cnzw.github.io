@@ -208,7 +208,7 @@ footer:
   owner:
     enable: true
     since: 2020
-  custom_text: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn"><span>浙 ICP 备 2024046806</span></a>
+  custom_text: <a target="_blank" href="https://beian.miit.gov.cn">浙 ICP 备 2024046806 号</span></a><span> | <span><a href="https://icp.gov.moe/?keyword=20245112" target="_blank">萌 ICP 备 20245112 号</a>
   copyright: true # Copyright of theme and framework
 
 # aside (側邊欄)
