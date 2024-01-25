@@ -11,6 +11,22 @@ script.
         dark: 'html[data-theme="dark"]',
         path: window.location.pathname,
         comment: !{lazyload ? false : count},
+        imageUploader: (file) => {
+          let formData = new FormData();
+          let headers = new Headers();
+          formData.append("file", file);
+          formData.append("album_id", "92");
+          formData.append("permission", "0");
+          headers.append("Authorization", "Bearer 201|AMFfVSSJGfpoSh2JamKRKsvlOAp4teikamKGYoVn");
+          headers.append("Accept", "application/json");
+          return fetch("https://wmimg.com/api/v1/upload", {
+            method: "POST",
+            headers: headers,
+            body: formData,
+          })
+            .then((resp) => resp.json())
+            .then((resp) => resp.data.links.url);
+        },
       }, !{JSON.stringify(option)}))
 
       const destroyWaline = () => {
