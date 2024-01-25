@@ -174,7 +174,23 @@
       dark: 'html[data-theme="dark"]',
       path: window.location.pathname,
       comment: true,
-    }, null))
+      imageUploader: (file) => {
+        let formData = new FormData();
+        let headers = new Headers();
+        formData.append("file", file);
+        formData.append("album_id", "92");
+        formData.append("permission", "0");
+        headers.append("Authorization", "Bearer 201|AMFfVSSJGfpoSh2JamKRKsvlOAp4teikamKGYoVn");
+        headers.append("Accept", "application/json");
+        return fetch("https://wmimg.com/api/v1/upload", {
+          method: "POST",
+          headers: headers,
+          body: formData,
+        })
+          .then((resp) => resp.json())
+          .then((resp) => resp.data.links.url);
+      },
+    }, {"requiredMeta":["nick","mail"],"emoji":["https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq"],"reaction":["https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_thumbsup.gif","https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_thumbsdown.gif","https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_lift_check.gif","https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_dizzy_face.gif","https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_waterlemon_face.gif"],"locale":{"reaction0":"赞","reaction1":"踩","reaction2":"思考","reaction3":"晕","reaction4":"无聊","placeholder":"欢迎评论\n评论需要填写昵称邮箱或使用社交登录\n评论会展示您的UA和归属地"}}))
 
     const destroyWaline = () => {
       waline.destroy()
