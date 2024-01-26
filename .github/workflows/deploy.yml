@@ -1,0 +1,91 @@
+name: Elog Deploy
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - elog-deploy
+
+jobs:
+  deploy:
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+          operating-system: ['ubuntu-latest']
+          node_version: [16.x]
+
+    environment:
+      name: cloudflare-pages
+      url: https://www.cnzw.top
+
+    env:
+      FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+      FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+      FEISHU_FOLDER_TOKEN: ${{ secrets.FEISHU_FOLDER_TOKEN }}
+      QINIU_SECRET_ID: ${{ secrets.QINIU_SECRET_ID }}
+      QINIU_SECRET_KEY: ${{ secrets.QINIU_SECRET_KEY }}
+      QINIU_BUCKET: ${{ secrets.QINIU_BUCKET }}
+      QINIU_HOST: ${{ secrets.QINIU_HOST }}
+      TZ: Asia/Shanghai
+      GIT_USER: github-actions[bot]
+      GIT_EMAIL: github-actions[bot]@users.noreply.github.com
+
+    steps:
+      - name: 签出分支
+        uses: actions/checkout@v4
+
+      - name: 还原依赖
+        id: cache-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: 安装 Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node_version }}
+          cache: 'npm'
+
+      - name: 安装依赖
+        if: steps.cache-restore.outputs.cache-hit == 'false'
+        run: |
+          npm ci
+
+      - name: Elog 同步
+        run: |
+          npm run elog:sync
+
+      - name: 提交 Elog 同步的文章
+        run: |
+          git config --global user.name $GIT_USER
+          git config --global user.email $GIT_EMAIL
+          git add .
+          git commit -m "更新文章" -a
+
+      - name: 推送到仓库
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: hexo
+
+      - name: 生成静态文件
+        run: |
+          npm run build
+
+      - name: 部署 Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: main
+          publish_dir: /public
+          commit_message: 更新文章
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+      - name: 缓存依赖
+        uses: actions/cache/restore@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
