@@ -7,7 +7,7 @@ on:
       - elog-deploy
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   deploy:
