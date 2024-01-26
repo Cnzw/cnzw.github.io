@@ -49,7 +49,7 @@ jobs:
           cache: 'npm'
 
       - name: 安装依赖
-        if: steps.cache-restore.outputs.cache-hit == 'false'
+        if: steps.cache-restore.outputs.cache-hit != 'true'
         run: |
           npm ci
 
