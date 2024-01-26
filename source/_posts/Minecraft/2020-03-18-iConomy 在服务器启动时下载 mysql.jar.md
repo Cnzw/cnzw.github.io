@@ -2,7 +2,9 @@
 title: iConomy 在服务器启动时下载 mysql.jar
 urlname: 2020-03-18-iConomy 在服务器启动时下载 mysql.jar
 date: '2020-03-18 23:18:00'
-updated: '2024-01-26 14:19:51'
+updated: '2024-01-26 16:03:30'
+categories:
+  - minecraft
 tags:
   - typecho
 ---
