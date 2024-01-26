@@ -1,15 +1,15 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
-  "private": true,
+  "name": "cnzw-blog",
+  "version": "latest",
+  "private": false,
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server",
-    "elog:sync-local": "elog sync -e .elog.env",
-    "elog:sync": "elog sync",
-    "elog:clean": "elog clean"
+    "build": "npx hexo generate",
+    "clean": "npx hexo clean",
+    "deploy": "npx hexo deploy",
+    "server": "npx hexo server",
+    "elog:sync-local": "npx elog sync -e .elog.env",
+    "elog:sync": "npx elog sync",
+    "elog:clean": "npx elog clean"
   },
   "hexo": {
     "version": "7.1.1"
