@@ -6,6 +6,9 @@ on:
     types:
       - elog-deploy
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ${{ matrix.operating-system }}
