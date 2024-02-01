@@ -1,0 +1,32 @@
+name: Gitee Sync
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  sync:
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+        operating-system: ['ubuntu-latest']
+        node_version: [16.x]
+    
+    environment:
+      name: gitee-pages
+      url: https://cnzw.gitee.io
+
+    env:
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    steps:
+      - name: 同步分支至 Gitee
+        uses: zent-contrib/sync-git-branch@v1.0.0
+        with:
+          source-branch: main
+          destination-repo: git@gitee.com:cnzw/cnzw.git
+          destination-branch: master
+
