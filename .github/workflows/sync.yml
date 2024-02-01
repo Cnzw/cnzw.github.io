@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: 同步分支至 Gitee
-        uses: zent-contrib/sync-git-branch@v1.0.0
+        uses: estevao90/sync-git-branch@main
         with:
           source-branch: main
           destination-repo: git@gitee.com:cnzw/cnzw.git
