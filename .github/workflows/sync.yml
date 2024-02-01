@@ -8,12 +8,7 @@ on:
 
 jobs:
   sync:
-    runs-on: ${{ matrix.operating-system }}
-
-    strategy:
-      matrix:
-        operating-system: ['ubuntu-latest']
-        node_version: [16.x]
+    runs-on: ubuntu-latest
     
     environment:
       name: gitee-pages

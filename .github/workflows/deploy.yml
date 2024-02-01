@@ -11,12 +11,7 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: ${{ matrix.operating-system }}
-
-    strategy:
-      matrix:
-          operating-system: ['ubuntu-latest']
-          node_version: [16.x]
+    runs-on: ubuntu-latest
 
     environment:
       name: cloudflare-pages
@@ -45,10 +40,10 @@ jobs:
           path: node_modules
           key: node-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
-      - name: 安装 Node.js ${{ matrix.node_version }}
+      - name: 安装 Node.js 16.x
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: 16.x
           cache: 'npm'
 
       - name: 安装依赖
