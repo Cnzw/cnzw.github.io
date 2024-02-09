@@ -1,6 +1,6 @@
 {
   "name": "cnzw-blog",
-  "version": "latest",
+  "version": "0.0.0",
   "private": false,
   "scripts": {
     "build": "hexo generate",
