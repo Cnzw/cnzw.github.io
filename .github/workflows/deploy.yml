@@ -49,7 +49,7 @@ jobs:
       - name: 安装依赖
         if: steps.cache-restore.outputs.cache-hit != 'true'
         run: |
-          npm ci
+          npm install --prod
 
       - name: Elog 同步
         run: |
