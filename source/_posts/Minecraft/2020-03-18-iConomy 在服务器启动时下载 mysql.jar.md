@@ -7,6 +7,7 @@ categories:
   - Minecraft
 tags:
   - typecho
+abbrlink: 19466
 ---
 在搞服务器经济同步时, 使用 iConomy7 通过 mysql 进行同步
 

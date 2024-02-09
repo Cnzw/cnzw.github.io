@@ -63,15 +63,15 @@ jobs:
           git add .
           git commit -m "更新文章" -a
 
+      - name: 生成静态文件
+        run: |
+          npm run build
+
       - name: 推送到仓库
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: hexo
-
-      - name: 生成静态文件
-        run: |
-          npm run build
 
       - name: 部署 Github Pages
         uses: peaceiris/actions-gh-pages@v3
