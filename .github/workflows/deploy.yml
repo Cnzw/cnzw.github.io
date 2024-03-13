@@ -67,14 +67,6 @@ jobs:
         run: |
           npm run elog:sync
 
-      - name: 提交 Elog 同步的文章
-        run: |
-          echo `date +"%Y-%m-%d %H:%M:%S"` CI/CD > time.txt
-          git config --global user.name $GIT_USER
-          git config --global user.email $GIT_EMAIL
-          git add .
-          git commit -m "更新文章" -a
-
       - name: 生成静态文件
         run: |
           npm run build
@@ -94,6 +86,14 @@ jobs:
       - name: 调试
         run: |
           echo ${{ steps.replace2.outputs.modifiedFiles }}
+
+      - name: 提交 Elog 同步的文章
+        run: |
+          echo `date +"%Y-%m-%d %H:%M:%S"` CI/CD > time.txt
+          git config --global user.name $GIT_USER
+          git config --global user.email $GIT_EMAIL
+          git add .
+          git commit -m "更新文章" -a
 
       - name: 推送到仓库
         uses: ad-m/github-push-action@master
