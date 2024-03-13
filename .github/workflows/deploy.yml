@@ -112,6 +112,7 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
       - name: 缓存依赖
+        if: steps.cache-restore.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           path: node_modules
