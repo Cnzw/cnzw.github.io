@@ -73,6 +73,10 @@ jobs:
       - name: 生成静态文件
         run: |
           npm run build
+
+      - name: 提交百度链接
+        run: |
+          npm run deploy
       
       - name: 还原 Token
         uses: jacobtomlinson/gha-find-replace@v3
