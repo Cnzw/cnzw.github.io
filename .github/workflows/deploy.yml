@@ -54,7 +54,7 @@ jobs:
       - name: 替换 Token
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "'$BAIDU_SUBMIT_TOKEN'"
+          find: "'\\$BAIDU_SUBMIT_TOKEN'"
           replace: ${{ secrets.BAIDU_SUBMIT_TOKEN }}
           include: "_config.yml"
       
