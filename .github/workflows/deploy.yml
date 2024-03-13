@@ -57,6 +57,10 @@ jobs:
           find: "'$BAIDU_SUBMIT_TOKEN'"
           replace: ${{ secrets.BAIDU_SUBMIT_TOKEN }}
           include: "_config.yml"
+      
+      - name: 调试
+        run: |
+          cat _config.yml
 
       - name: Elog 同步
         run: |
