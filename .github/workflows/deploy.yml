@@ -52,6 +52,7 @@ jobs:
           npm install --prod
 
       - name: 替换 Token
+        id: replace1
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "'\\$BAIDU_SUBMIT_TOKEN'"
@@ -60,7 +61,7 @@ jobs:
       
       - name: 调试
         run: |
-          cat _config.yml
+          echo ${{ steps.replace1.outputs.modifiedFiles }}
 
       - name: Elog 同步
         run: |
@@ -83,11 +84,16 @@ jobs:
           npm run deploy
       
       - name: 还原 Token
+        id: replace2
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "token: .{16} #BAIDU_SUBMIT_TOKEN"
           replace: "token: '$BAIDU_SUBMIT_TOKEN' #BAIDU_SUBMIT_TOKEN"
           include: "_config.yml"
+      
+      - name: 调试
+        run: |
+          echo ${{ steps.replace2.outputs.modifiedFiles }}
 
       - name: 推送到仓库
         uses: ad-m/github-push-action@master
