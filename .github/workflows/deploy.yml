@@ -58,10 +58,6 @@ jobs:
           find: "'BAIDU_SUBMIT_TOKEN'"
           replace: ${{ secrets.BAIDU_SUBMIT_TOKEN }}
           include: "_config.yml"
-      
-      - name: 调试
-        run: |
-          echo ${{ steps.replace1.outputs.modifiedFiles }}
 
       - name: Elog 同步
         run: |
@@ -82,10 +78,6 @@ jobs:
           find: "token: .{16} #BAIDU_SUBMIT_TOKEN"
           replace: "token: 'BAIDU_SUBMIT_TOKEN' #BAIDU_SUBMIT_TOKEN"
           include: "_config.yml"
-      
-      - name: 调试
-        run: |
-          echo ${{ steps.replace2.outputs.modifiedFiles }}
 
       - name: 提交 Elog 同步的文章
         run: |
