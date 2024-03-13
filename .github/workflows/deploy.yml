@@ -51,6 +51,13 @@ jobs:
         run: |
           npm install --prod
 
+      - name: 替换 Token
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "'$BAIDU_SUBMIT_TOKEN'"
+          replace: ${{ secrets.BAIDU_SUBMIT_TOKEN }}
+          include: "_config.yml"
+
       - name: Elog 同步
         run: |
           npm run elog:sync
@@ -66,6 +73,13 @@ jobs:
       - name: 生成静态文件
         run: |
           npm run build
+      
+      - name: 还原 Token
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "token: .{16} #BAIDU_SUBMIT_TOKEN"
+          replace: "token: '$BAIDU_SUBMIT_TOKEN' #BAIDU_SUBMIT_TOKEN"
+          include: "_config.yml"
 
       - name: 推送到仓库
         uses: ad-m/github-push-action@master
