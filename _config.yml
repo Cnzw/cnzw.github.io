@@ -102,10 +102,11 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://github.com/Cnzw/cnzw.github.io.git
-  branch: main
-  message: "更新文章"
+  - type: git
+    repo: https://github.com/Cnzw/cnzw.github.io.git
+    branch: main
+    message: "更新文章"
+  - type: baidu_url_submitter
 
 # abbrlink config
 abbrlink:
@@ -143,3 +144,9 @@ neat_js:
   exclude:
     - '**/*.min.js'
     - '**/index.js'
+
+baidu_url_submit:
+  count: 1000 ## 提交最新的一个链接
+  host: www.cnzw.top ## 在百度站长平台中注册的域名
+  token: '$BAIDU_SUBMIT_TOKEN' #BAIDU_SUBMIT_TOKEN ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
