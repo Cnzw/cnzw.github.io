@@ -2,7 +2,7 @@
 title: Linux 的 open file 限制
 urlname: 2022-07-09-Linux 的 open file 限制
 date: '2022-07-09 16:19:00'
-updated: '2024-03-14 23:10:20'
+updated: '2024-03-14 23:21:38'
 categories:
   - Minecraft
 tags:
@@ -39,4 +39,4 @@ abbrlink: 17417
 
 具体原因是 Nodejs 服务是由 systemctl 启动的, 受到`/etc/systemd/system.conf`限制的, 修改`/etc/security/limits.conf`对于服务是无效的.
 # 后记
-{% post_link '折腾/2022-07-09-Docker 启动报错 status=205!LIMITS' %}
+[Docker 启动报错 status=205!LIMITS](/p/5823/)
