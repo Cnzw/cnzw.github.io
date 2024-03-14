@@ -4,7 +4,16 @@
   <url>
     <loc>https://www.cnzw.top/categories/</loc>
     
-    <lastmod>2024-03-13</lastmod>
+    <lastmod>2024-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/tags/</loc>
+    
+    <lastmod>2024-03-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,6 +22,24 @@
   <url>
     <loc>https://www.cnzw.top/link/</loc>
     
+    <lastmod>2024-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/p/32785/</loc>
+    
+    <lastmod>2024-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/p/43262/</loc>
+    
     <lastmod>2024-03-13</lastmod>
     
     <changefreq>monthly</changefreq>
@@ -20,7 +47,52 @@
   </url>
   
   <url>
-    <loc>https://www.cnzw.top/tags/</loc>
+    <loc>https://www.cnzw.top/p/24110/</loc>
+    
+    <lastmod>2024-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/p/5823/</loc>
+    
+    <lastmod>2024-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/p/17417/</loc>
+    
+    <lastmod>2024-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/p/52606/</loc>
+    
+    <lastmod>2024-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/p/26042/</loc>
+    
+    <lastmod>2024-03-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/p/27904/</loc>
     
     <lastmod>2024-03-13</lastmod>
     
@@ -148,7 +220,7 @@
 
   <url>
     <loc>https://www.cnzw.top/</loc>
-    <lastmod>2024-03-13</lastmod>
+    <lastmod>2024-03-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -156,14 +228,21 @@
   
   <url>
     <loc>https://www.cnzw.top/tags/typecho/</loc>
-    <lastmod>2024-03-13</lastmod>
+    <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.cnzw.top/tags/Default/</loc>
-    <lastmod>2024-03-13</lastmod>
+    <lastmod>2024-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/tags/Huginn/</loc>
+    <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -171,22 +250,29 @@
 
   
   <url>
-    <loc>https://www.cnzw.top/categories/Default/</loc>
-    <lastmod>2024-03-13</lastmod>
+    <loc>https://www.cnzw.top/categories/Minecraft/</loc>
+    <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.cnzw.top/categories/Minecraft/</loc>
-    <lastmod>2024-03-13</lastmod>
+    <loc>https://www.cnzw.top/categories/Default/</loc>
+    <lastmod>2024-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cnzw.top/categories/Minecraft/%E6%8A%98%E8%85%BE/</loc>
+    <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.cnzw.top/categories/%E6%8A%98%E8%85%BE/</loc>
-    <lastmod>2024-03-13</lastmod>
+    <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
