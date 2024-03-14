@@ -2,14 +2,14 @@
 title: 可道云 Kodexplorer 软链接访问问题
 urlname: 2023-01-24-可道云 Kodexplorer 软链接访问问题
 date: '2023-01-24 21:17:00'
-updated: '2024-03-13 20:03:17'
+updated: '2024-03-14 23:10:30'
 categories:
   - 折腾
 tags:
   - typecho
 abbrlink: 43262
 ---
-众所周知，MCSM的文件管理挺难用的。（虽然也在努力改进）在最开始的想法是使用 [下载 - 可道云-私有云存储& 协同办公平台_企业网盘_企业云盘_网盘_云盘](https://kodcloud.com/download/) 的，但是它的多用户并没有指定目录的功能，只能憨憨的把服务器扔到web目录下，既不安全也做不到多用户同时编辑一个服务器。所以那时候退了一步使用了基于 docker 的 filebrowser。【文章链接待补】
+众所周知，MCSM的文件管理挺难用的。（虽然也在努力改进）在最开始的想法是使用 [Kodexplorer](https://kodcloud.com/download/) 的，但是它的多用户并没有指定目录的功能，只能憨憨的把服务器扔到web目录下，既不安全也做不到多用户同时编辑一个服务器。所以那时候退了一步使用了基于 docker 的 filebrowser。({% post_link '折腾/2023-01-03-Filebrowser Docker Volume 文件权限问题' %})
 
 然后在最近突然开窍，Linux 不是有软链接功能嘛，再加上 kodexplorer 配置里的定义用户目录功能，可以实现服务器文件不在web目录下，而且多用户同时编辑的目标。
 

@@ -2,7 +2,7 @@
 title: Docker 启动报错 status=205/LIMITS
 urlname: 2022-07-09-Docker 启动报错 status=205/LIMITS
 date: '2022-07-09 16:28:00'
-updated: '2024-03-13 19:57:06'
+updated: '2024-03-14 23:10:36'
 categories:
   - 折腾
 tags:
@@ -13,7 +13,7 @@ abbrlink: 5823
 
 
 
-出现的原因是因为我修改了`/etc/systemd/system.conf`, 随后在重启后发现 Docker 无法启动, 查看对应日志:
+出现的原因是因为我在上一篇文章（{% post_link 'Minecraft/2022-07-09-Linux 的 open file 限制' %}）修改了`/etc/systemd/system.conf`, 随后在重启后发现 Docker 无法启动, 查看对应日志:
 ```prolog
 [root@jh-java ~]# systemctl start docker
 Job for docker.service failed because the control process exited with error code. See “systemctl status docker.service” and “journalctl -xe” for details.
