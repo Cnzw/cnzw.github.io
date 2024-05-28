@@ -2,7 +2,7 @@
 title: Tailscale 部署中继 DERP
 urlname: 2024-03-21-Tailscale 部署中继 DERP
 date: '2024-03-21 15:42:02'
-updated: '2024-03-28 13:14:45'
+updated: '2024-03-28 13:18:51'
 categories:
   - 折腾
 tags:
