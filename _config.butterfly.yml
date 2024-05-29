@@ -462,7 +462,7 @@ waline:
     requiredMeta: ["nick", "mail"]
     emoji:
       [
-        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq'
+        'https://unpkg.com/@waline/emojis@1.2.0/qq'
       ]
     reaction:
       [
