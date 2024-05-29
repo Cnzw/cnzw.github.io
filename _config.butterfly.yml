@@ -466,11 +466,11 @@ waline:
       ]
     reaction:
       [
-        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_thumbsup.gif', # 赞
-        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_thumbsdown.gif', # 踩
-        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_lift_check.gif', # 思考
-        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_dizzy_face.gif', # 晕
-        'https://jsd.cdn.zzko.cn/npm/@waline/emojis@1.2.0/qq/qq_waterlemon_face.gif' # 无聊
+        'https://unpkg.com/@waline/emojis@1.2.0/qq/qq_thumbsup.gif', # 赞
+        'https://unpkg.com/@waline/emojis@1.2.0/qq/qq_thumbsdown.gif', # 踩
+        'https://unpkg.com/@waline/emojis@1.2.0/qq/qq_lift_check.gif', # 思考
+        'https://unpkg.com/@waline/emojis@1.2.0/qq/qq_dizzy_face.gif', # 晕
+        'https://unpkg.com/@waline/emojis@1.2.0/qq/qq_waterlemon_face.gif' # 无聊
       ]
     locale:
       reaction0: 赞
