@@ -34,7 +34,8 @@ code_word_wrap: false
 #   icon: link || the description || color
 social:
   fab fa-github: https://github.com/cnzw || Github || '#24292e'
-  fas fa-envelope: mailto:blog@cnzw.top || Email || '#4a7dbe'
+  fas fa-envelope: mailto:blog@cnzw.top || Email || '#24292e'
+  fas fa-rss: /atom.xml || RSS || '#24292e'
 
 # Image (圖片設置)
 # --------------------------------------
@@ -366,11 +367,11 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # Preload the search data when the page loads.
-  preload: false
+  preload: true
   # Show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
+  top_n_per_article: 3
   # Unescape html strings to the readable one.
   unescape: false
   CDN:
