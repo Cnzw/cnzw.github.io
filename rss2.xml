@@ -44,31 +44,6 @@
     </item>
     
     <item>
-      <title>VSCode Remote + Windows SSH</title>
-      <link>https://www.cnzw.top/p/2493/</link>
-      <guid>https://www.cnzw.top/p/2493/</guid>
-      <pubDate>Sat, 24 Aug 2024 12:51:29 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;在调试 mc 服务器时，想使用 Git 来管理各个插件的配置文件。于是逛了一圈 Windows 上的版本管理软件，发现操作的时候窗口很多（文件夹窗口 + 编辑器 + Git），从而转向 VSCode 这类继承了项目文件管理和 Git 的编码工具。&lt;/p&gt;
-&lt;p&gt;随后发现 V</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>在调试 mc 服务器时，想使用 Git 来管理各个插件的配置文件。于是逛了一圈 Windows 上的版本管理软件，发现操作的时候窗口很多（文件夹窗口 + 编辑器 + Git），从而转向 VSCode 这类继承了项目文件管理和 Git 的编码工具。</p><p>随后发现 VSCode Remote 是支持 Windows OpenSSH 的，VSCode Remote 体验基本和本地开发无异，甚至不需要开远程桌面，于是写此文章记录。</p><h1 id="安装-SSH"><a href="#安装-SSH" class="headerlink" title="安装 SSH"></a>安装 SSH</h1><p>一般来说，在 控制面板&#x2F;设置 里的 应用&gt;可选功能里。具体步骤见链接。</p><ul><li><p><a href="https://blog.csdn.net/engchina/article/details/134445460">Windows 11 配置 ssh server 服务_windows11 gitea ssh server-CSDN博客</a></p></li><li><p><a href="https://blog.csdn.net/frighting_ing/article/details/122705781">windows 安装 OpenSSH-CSDN博客</a></p></li></ul><p>需要注意，可能安装系统的时候 OpenSSH 是默认安装的，但是版本可能有问题无法启动。此时卸载再重新安装就可以了。</p><h1 id="启动-SSH"><a href="#启动-SSH" class="headerlink" title="启动 SSH"></a>启动 SSH</h1><p>首次安装 OpenSSH 需要手动到 services.msc（Windows+R键） 里启动来生成配置文件。重启 OpenSSH 也是在这里。</p><h1 id="配置-SSH"><a href="#配置-SSH" class="headerlink" title="配置 SSH"></a>配置 SSH</h1><p>配置文件在：<code>C:\ProgramData\ssh\sshd_config</code></p><p>记得去掉<code>#</code>来启用配置项</p><h2 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h2><p><code>Port 22</code></p><h2 id="禁用密码登录和允许密钥登录"><a href="#禁用密码登录和允许密钥登录" class="headerlink" title="禁用密码登录和允许密钥登录"></a>禁用密码登录和允许密钥登录</h2><p><code>PasswordAuthentication no</code></p><p><code>PubkeyAuthentication yes</code></p><p><code>AuthorizedKeysFile .ssh/authorized_keys</code></p><h2 id="配置密钥"><a href="#配置密钥" class="headerlink" title="配置密钥"></a>配置密钥</h2><p>将公钥内容放在<code>C:\Users\Administrator\.ssh\authorized_keys</code>中，重启后就可以了。</p><p>如果<code>.ssh</code>文件夹不存在，在 cmd 中输入<code>mkdir .ssh</code>即可。（直接创建文件夹会失败）</p><p>生成密钥对命令：<code>ssh-keygen</code>（注意路径，别找不到文件了）</p><h1 id="配置-VSCode-Remote"><a href="#配置-VSCode-Remote" class="headerlink" title="配置 VSCode Remote"></a>配置 VSCode Remote</h1><ol><li>点击 VSCode 左下角的</li></ol><p><img src="https://cdn.cnzw.top/blog/GKyRbqR6XogmQFxK0v3cmCcYnUc.png" alt="image"></p><ol><li><p>在弹出窗口选择“连接到主机…”</p></li><li><p>在弹出窗口选择“配置 SSH 主机…”</p></li><li><p>选择第一个配置文件（C:\Users\用户名.ssh\config）</p></li><li><p>编辑配置文件：</p></li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Host</span> <span class="string">显示的名称</span></span><br><span class="line">    <span class="string">HostName</span> <span class="string">www.baidu.com</span></span><br><span class="line">    <span class="string">Port</span> <span class="number">22</span></span><br><span class="line">    <span class="string">User</span> <span class="string">用户名（administrator）</span></span><br><span class="line">    <span class="string">IdentityFile</span> <span class="string">C:\Users\用户名\.ssh\生成的私钥文件</span></span><br><span class="line"><span class="string">Host</span> <span class="string">显示的名称2</span></span><br><span class="line">    <span class="string">HostName</span> <span class="string">www.baidu.com</span></span><br><span class="line">    <span class="string">Port</span> <span class="number">22</span></span><br><span class="line">    <span class="string">User</span> <span class="string">用户名（administrator）</span></span><br><span class="line">    <span class="string">IdentityFile</span> <span class="string">C:\Users\用户名\.ssh\生成的私钥文件</span></span><br></pre></td></tr></table></figure><ol><li><p>再次 VSCode 左下角的“&gt;&lt;”</p></li><li><p>在弹出窗口选择“连接到主机…”</p></li><li><p>在弹出窗口选择配置好的主机</p></li><li><p>在确认了密钥签名后选择对应的系统（Linux，Windows，MacOS）</p></li><li><p>等待远程主机下载 VSCode</p></li><li><p>完事</p></li></ol>]]></content:encoded>
-      
-      
-      <category domain="https://www.cnzw.top/categories/%E6%8A%98%E8%85%BE/">折腾</category>
-      
-      
-      
-      <comments>https://www.cnzw.top/p/2493/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
       <title>Hexo+Elog+Github+Cloudflare 博客全流程搭建 - 开源免费免维护多平台同步博客搭建</title>
       <link>https://www.cnzw.top/p/11485/</link>
       <guid>https://www.cnzw.top/p/11485/</guid>
@@ -548,6 +523,33 @@
       
       
       <comments>https://www.cnzw.top/p/32289/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>高考加油!</title>
+      <link>https://www.cnzw.top/p/34161/</link>
+      <guid>https://www.cnzw.top/p/34161/</guid>
+      <pubDate>Mon, 06 Jul 2020 07:50:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;&lt;strong&gt;高考加油!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;高考加油!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;高考加油!&lt;/strong&gt;&lt;/p&gt;
+</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p><strong>高考加油!</strong></p><p><strong>高考加油!</strong></p><p><strong>高考加油!</strong></p>]]></content:encoded>
+      
+      
+      
+      <category domain="https://www.cnzw.top/%E6%A0%87%E7%AD%BE/typecho/">typecho</category>
+      
+      
+      <comments>https://www.cnzw.top/p/34161/#disqus_thread</comments>
       
     </item>
     
