@@ -2,7 +2,7 @@
 title: VSCode Remote + Windows OpenSSH
 urlname: 2024-08-24-VSCode Remote + Windows OpenSSH
 date: '2024-08-24 20:51:29'
-updated: '2024-09-08 18:01:58'
+updated: '2024-12-27 16:47:26'
 categories:
   - 折腾
 top_img: 'https://atts.w3cschool.cn/attachments/image/20240108/1704680885590831.png'
@@ -16,6 +16,8 @@ abbrlink: 50514
 - [Windows 11 配置 ssh server 服务_windows11 gitea ssh server-CSDN博客](https://blog.csdn.net/engchina/article/details/134445460)
 
 - [windows 安装 OpenSSH-CSDN博客](https://blog.csdn.net/frighting_ing/article/details/122705781)
+
+- Server 2016 不自带 OpenSSH，需要自己[下载](https://github.com/PowerShell/Win32-OpenSSH)
 
 需要注意，可能安装系统的时候 OpenSSH 是默认安装的，但是版本可能有问题无法启动。此时卸载再重新安装就可以了。
 # 启动 SSH

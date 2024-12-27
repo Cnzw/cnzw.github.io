@@ -475,12 +475,12 @@
     {
       "id": "IbMsdc9SDowyNexd9FLcRCn9nnc",
       "doc_id": "IbMsdc9SDowyNexd9FLcRCn9nnc",
-      "updated": 1725789718000,
+      "updated": 1735289246000,
       "properties": {
         "title": "VSCode Remote + Windows OpenSSH",
         "urlname": "2024-08-24-VSCode Remote + Windows OpenSSH",
         "date": "2024-08-24 20:51:29",
-        "updated": "2024-09-08 18:01:58",
+        "updated": "2024-12-27 16:47:26",
         "categories": [
           "折腾"
         ],
@@ -528,12 +528,12 @@
   ],
   "catalog": [
     {
-      "id": "EJiDdPjdLo8eHyxxs0KcEnZ4ncc",
-      "doc_id": "EJiDdPjdLo8eHyxxs0KcEnZ4ncc",
-      "title": "Hexo+Elog+Github+Cloudflare 博客全流程搭建 - 开源免费免维护多平台同步博客搭建",
-      "updated": 1725790053000,
-      "createdAt": 1717584458000,
-      "updatedAt": 1725790053000,
+      "id": "IbMsdc9SDowyNexd9FLcRCn9nnc",
+      "doc_id": "IbMsdc9SDowyNexd9FLcRCn9nnc",
+      "title": "VSCode Remote + Windows OpenSSH",
+      "updated": 1735289246000,
+      "createdAt": 1724503889000,
+      "updatedAt": 1735289246000,
       "catalog": [
         {
           "title": "折腾",
@@ -542,12 +542,12 @@
       ]
     },
     {
-      "id": "IbMsdc9SDowyNexd9FLcRCn9nnc",
-      "doc_id": "IbMsdc9SDowyNexd9FLcRCn9nnc",
-      "title": "VSCode Remote + Windows OpenSSH",
-      "updated": 1725789718000,
-      "createdAt": 1724503889000,
-      "updatedAt": 1725789718000,
+      "id": "EJiDdPjdLo8eHyxxs0KcEnZ4ncc",
+      "doc_id": "EJiDdPjdLo8eHyxxs0KcEnZ4ncc",
+      "title": "Hexo+Elog+Github+Cloudflare 博客全流程搭建 - 开源免费免维护多平台同步博客搭建",
+      "updated": 1725790053000,
+      "createdAt": 1717584458000,
+      "updatedAt": 1725790053000,
       "catalog": [
         {
           "title": "折腾",
