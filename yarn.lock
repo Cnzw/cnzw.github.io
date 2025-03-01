@@ -26,12 +26,12 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@elog/cli@^0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/cli/-/cli-0.14.5.tgz#d379dbdc22fcfdf2b26692b9df0e1902b38f7e67"
+"@elog/cli@^0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/cli/-/cli-0.14.6.tgz#55809a5d6c2f2261fc8c98cb7f020ec966afaf6d"
   dependencies:
-    "@elog/core" "0.14.5"
-    "@elog/shared" "0.14.5"
+    "@elog/core" "0.14.6"
+    "@elog/shared" "0.14.6"
     commander "^9.4.1"
     dotenv "^16.0.3"
     fs-extra "^11.1.1"
@@ -39,51 +39,51 @@
     latest-version "5.1.0"
     semver "^7.3.8"
 
-"@elog/core@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/core/-/core-0.14.5.tgz#d9ad3d6692794db9b64772c665e2c6e7da4a3a27"
+"@elog/core@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/core/-/core-0.14.6.tgz#c136920caa6bf14aa739f9f70433ea1cf22d3924"
   dependencies:
-    "@elog/deploy" "0.14.5"
-    "@elog/plugin-image" "0.14.5"
-    "@elog/sdk-feishu" "0.14.5"
-    "@elog/sdk-flowus" "0.14.5"
-    "@elog/sdk-notion" "0.14.5"
-    "@elog/sdk-wolai" "0.14.5"
-    "@elog/sdk-yuque" "0.14.5"
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/deploy" "0.14.6"
+    "@elog/plugin-image" "0.14.6"
+    "@elog/sdk-feishu" "0.14.6"
+    "@elog/sdk-flowus" "0.14.6"
+    "@elog/sdk-notion" "0.14.6"
+    "@elog/sdk-wolai" "0.14.6"
+    "@elog/sdk-yuque" "0.14.6"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
 
-"@elog/deploy@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/deploy/-/deploy-0.14.5.tgz#f5382ba073bd0c3708db40e7dff26a0691c0db49"
+"@elog/deploy@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/deploy/-/deploy-0.14.6.tgz#e953e782b6c7693a6109cbbd8b273b45553d9224"
   dependencies:
-    "@elog/plugin-adapter" "0.14.5"
-    "@elog/sdk-confluence" "0.14.5"
-    "@elog/sdk-halo" "0.14.5"
-    "@elog/sdk-wordpress" "0.14.5"
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/plugin-adapter" "0.14.6"
+    "@elog/sdk-confluence" "0.14.6"
+    "@elog/sdk-halo" "0.14.6"
+    "@elog/sdk-wordpress" "0.14.6"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
     filenamify "^4.3.0"
     mkdirp "^1.0.4"
     transliteration "^2.3.5"
 
-"@elog/plugin-adapter@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/plugin-adapter/-/plugin-adapter-0.14.5.tgz#27178f1662758b9cdceadb8f9a01db6f79cc186a"
+"@elog/plugin-adapter@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/plugin-adapter/-/plugin-adapter-0.14.6.tgz#d04b913da572938c89ae26729ddce3516102627e"
   dependencies:
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
     gray-matter "^4.0.3"
     highlight.js "^11.8.0"
     markdown-it "^13.0.2"
     marked "^5.1.1"
 
-"@elog/plugin-image@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/plugin-image/-/plugin-image-0.14.5.tgz#1344e3e61b4b01e9ecde14fa03b602330bf04ba3"
+"@elog/plugin-image@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/plugin-image/-/plugin-image-0.14.6.tgz#0c630ad16985a5596e3cda07e1d8312c57a3a34d"
   dependencies:
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
     ali-oss "^6.17.1"
     cos-nodejs-sdk-v5 "^2.11.16"
     mkdirp "^1.0.4"
@@ -91,76 +91,76 @@
     tiny-async-pool "^1.3.0"
     upyun "^3.4.6"
 
-"@elog/sdk-confluence@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/sdk-confluence/-/sdk-confluence-0.14.5.tgz#aa0b21e5b43b7f07c9f0d719c49dbfdbba0ca3fa"
+"@elog/sdk-confluence@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/sdk-confluence/-/sdk-confluence-0.14.6.tgz#182be655501937bdb710177df8554a02572aa382"
   dependencies:
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
 
-"@elog/sdk-feishu@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/sdk-feishu/-/sdk-feishu-0.14.5.tgz#93a5d9b87051c2d52019385176355048f2a4af7e"
+"@elog/sdk-feishu@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/sdk-feishu/-/sdk-feishu-0.14.6.tgz#f72c48f833fb798303dd139d0cac43f2a1ff66de"
   dependencies:
-    "@elog/shared" "0.14.5"
+    "@elog/shared" "0.14.6"
     "@feishux/api" "^0.3.3"
     "@feishux/doc-to-md" "^0.3.3"
     "@feishux/shared" "^0.3.3"
     front-matter "^4.0.2"
     tiny-async-pool "^1.3.0"
 
-"@elog/sdk-flowus@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/sdk-flowus/-/sdk-flowus-0.14.5.tgz#fd56a9b41aaf2653ac049356603e56c01e215332"
+"@elog/sdk-flowus@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/sdk-flowus/-/sdk-flowus-0.14.6.tgz#486721d4155ae06bb82e9017650341e47cf3b0e2"
   dependencies:
-    "@elog/shared" "0.14.5"
+    "@elog/shared" "0.14.6"
     "@flowusx/flowus-client" "^0.0.5-beta.4"
     "@flowusx/flowus-to-md" "^0.0.5-beta.4"
     tiny-async-pool "^1.3.0"
 
-"@elog/sdk-halo@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/sdk-halo/-/sdk-halo-0.14.5.tgz#5feeaf3646d5f5e27a18b4870fc144c5cc8142b7"
+"@elog/sdk-halo@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/sdk-halo/-/sdk-halo-0.14.6.tgz#b612f99ff264207f4e8476e4b867b90f15a55216"
   dependencies:
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
     "@halo-dev/api-client" "2.10.0"
     formstream "^1.3.1"
 
-"@elog/sdk-notion@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/sdk-notion/-/sdk-notion-0.14.5.tgz#f8aa3d2f71e9d2c6fe4a60f53a26becc1fa777b1"
+"@elog/sdk-notion@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/sdk-notion/-/sdk-notion-0.14.6.tgz#3246e4e9aea3ce4b4611cf2b9c47468d33f41813"
   dependencies:
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
     "@notionhq/client" "^2.2.2"
     notion-to-md "~3.1.1"
     tiny-async-pool "^1.3.0"
 
-"@elog/sdk-wolai@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/sdk-wolai/-/sdk-wolai-0.14.5.tgz#a58797619fe8e623404e24ff036ece53eb484221"
+"@elog/sdk-wolai@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/sdk-wolai/-/sdk-wolai-0.14.6.tgz#b06e9fbdc53165c5412fdf613790e29ece2de30c"
   dependencies:
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
     front-matter "^4.0.2"
     tiny-async-pool "^1.3.0"
 
-"@elog/sdk-wordpress@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/sdk-wordpress/-/sdk-wordpress-0.14.5.tgz#4744a75a15f1b30fc084a231776e23fece0dce30"
+"@elog/sdk-wordpress@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/sdk-wordpress/-/sdk-wordpress-0.14.6.tgz#7ed91804f58407f3477f34c82bac114b21e6db86"
   dependencies:
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
     "@types/wpapi" "^1.1.1"
     wpapi "^1.2.2"
 
-"@elog/sdk-yuque@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/sdk-yuque/-/sdk-yuque-0.14.5.tgz#934660d5d5a4fd02cf9e53ff8556d80edcc70a62"
+"@elog/sdk-yuque@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/sdk-yuque/-/sdk-yuque-0.14.6.tgz#865ef05476a618ef1d8ca4426966d8021fc9f945"
   dependencies:
-    "@elog/shared" "0.14.5"
-    "@elog/types" "0.14.5"
+    "@elog/shared" "0.14.6"
+    "@elog/types" "0.14.6"
     front-matter "^4.0.2"
     jsdom "^21.1.1"
     jsencrypt-node "^1.0.4"
@@ -170,9 +170,9 @@
     unified "^9.2.2"
     urllib "2.40.0"
 
-"@elog/shared@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/shared/-/shared-0.14.5.tgz#f6d623c20842998efc9c163869600b73d17016cf"
+"@elog/shared@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/shared/-/shared-0.14.6.tgz#6e065cb7383659e07a38a5c796eeb1f3e910a5a6"
   dependencies:
     chalk "^4.1.2"
     dayjs "^1.11.10"
@@ -182,9 +182,9 @@
     shelljs "^0.8.5"
     urllib "2.40.0"
 
-"@elog/types@0.14.5":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@elog/types/-/types-0.14.5.tgz#928d8cb4e8469d6e15505ccb9c0acddd34b35405"
+"@elog/types@0.14.6":
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/@elog/types/-/types-0.14.6.tgz#53b88eb1ba279a2a975a0f2dc45fa3aaab34f6d2"
 
 "@fastify/busboy@^2.0.0":
   version "2.1.1"
