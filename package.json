@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@elog/cli": "^0.14.7",
-    "hexo": "^8.1.0",
+    "hexo": "^8.1.1",
     "hexo-abbrlink": "^2.2.1",
     "hexo-baidu-url-submit": "0.0.6",
     "hexo-deployer-git": "^4.0.0",
