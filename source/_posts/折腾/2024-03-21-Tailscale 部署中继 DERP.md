@@ -82,7 +82,7 @@ services:
                 },
         },
 ```
-![image](https://cdn.cnzw.top/blog/FAQ3bvGqaoiG19x20ZBcqdZAnMh.png)
+![image](/assets/FAQ3bvGqaoiG19x20ZBcqdZAnMh.png)
 
 
 在 Tailscale 客户端上使用以下命令查看目前可以使用的 DERP 服务器：
@@ -100,7 +100,7 @@ Report:
                 -  1: 8.5ms   (阿里云-深圳)   -----> 这就是我们刚建的derp服务器
 ```
 tailscale netcheck 实际上只检测 3478/udp 的端口， 就算 netcheck 显示能连，也不一定代表 23479 端口可以转发流量。最简单的办法是直接打开 DERP 服务器的 URL：https://derp.XXXX.cn:443，如果看到如下页面，且地址栏的 SSL 证书标签显示正常可用，那才是真没问题了。
-![image](https://cdn.cnzw.top/blog/HWQxb2q9lo4BZmxpJRDc9mXcnWd.png)
+![image](/assets/HWQxb2q9lo4BZmxpJRDc9mXcnWd.png)
 # 参考
 [Tailscale 基础教程：部署私有 DERP 中继服务器](https://icloudnative.io/posts/custom-derp-servers/)
 

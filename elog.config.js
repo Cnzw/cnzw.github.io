@@ -21,19 +21,11 @@ module.exports = {
   },
   image: {
     enable: true,
-    platform: 'qiniu',
+    platform: 'local',
     local: {
-      outputDir: './docs/images',
-      prefixKey: '/images',
+      outputDir: './source/assets',
+      prefixKey: '/assets',
       pathFollowDoc: false,
-    },
-    qiniu: {
-      secretId: process.env.QINIU_SECRET_ID,
-      secretKey: process.env.QINIU_SECRET_KEY,
-      bucket: process.env.QINIU_BUCKET,
-      region: process.env.QINIU_REGION,
-      host: process.env.QINIU_HOST,
-      prefixKey: 'blog',
     }
   }
 }

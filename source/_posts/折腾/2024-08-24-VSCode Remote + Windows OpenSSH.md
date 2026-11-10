@@ -53,7 +53,7 @@ abbrlink: 50514
 # 配置 VSCode Remote
 1. 点击 VSCode 左下角的
 
-![image](https://cdn.cnzw.top/blog/GKyRbqR6XogmQFxK0v3cmCcYnUc.png)
+![image](/assets/GKyRbqR6XogmQFxK0v3cmCcYnUc.png)
 1. 在弹出窗口选择“连接到主机...”
 
 1. 在弹出窗口选择“配置 SSH 主机...”

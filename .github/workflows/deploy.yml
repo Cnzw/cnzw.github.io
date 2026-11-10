@@ -21,10 +21,6 @@ jobs:
       FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
       FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
       FEISHU_FOLDER_TOKEN: ${{ secrets.FEISHU_FOLDER_TOKEN }}
-      QINIU_SECRET_ID: ${{ secrets.QINIU_SECRET_ID }}
-      QINIU_SECRET_KEY: ${{ secrets.QINIU_SECRET_KEY }}
-      QINIU_BUCKET: ${{ secrets.QINIU_BUCKET }}
-      QINIU_HOST: ${{ secrets.QINIU_HOST }}
       TZ: Asia/Shanghai
       GIT_USER: github-actions[bot]
       GIT_EMAIL: github-actions[bot]@users.noreply.github.com
@@ -40,10 +36,10 @@ jobs:
           path: node_modules
           key: node-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
-      - name: 安装 Node.js 16.x
+      - name: 安装 Node.js 22.x
         uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: 22.x
           cache: 'npm'
 
       - name: 安装依赖

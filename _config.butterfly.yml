@@ -3,7 +3,7 @@
 # --------------------------------------
 
 nav:
-  logo: https://cdn.cnzw.top/blog/assets/logo.png # image
+  logo: /assets/logo.png # image
   display_title: true
   fixed: false # fixed navigation bar
 
@@ -45,7 +45,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://cdn.cnzw.top/blog/assets/avater.jpg
+  img: /assets/avater.jpg
   effect: false
 
 # Disable all banner image

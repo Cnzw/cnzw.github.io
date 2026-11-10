@@ -157,7 +157,7 @@ baidu_url_submit:
 
 feed:
   enable: true
-  icon: https://cdn.cnzw.top/blog/assets/logo.png
+  icon: https://www.cnzw.top/assets/logo.png
   type:
     - atom
     - rss2
